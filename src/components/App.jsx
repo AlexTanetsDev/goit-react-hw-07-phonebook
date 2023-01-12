@@ -32,8 +32,8 @@ export const App = () => {
           <ContactForm />
 
           <h2>{contacts.length === 0 ? 'Here will be your contacts. Add contacts' : 'Contacts'}</h2>
+          {contacts.length > 1 && <Filter />} 
           {isLoading && !error && <b>Request in progress...</b>}
-          {contacts.length > 1 && <Filter /> } 
           {contacts.length !== 0 && <ContactList /> }
            </Wrapper>
          </>
